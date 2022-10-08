@@ -1,3 +1,5 @@
+
+let indice = 0;
 export const confirmarResposta = (_respostaEscolhida,_correta) =>{
     const apareceModal = (_ativar) => {
         let modalAtivo = document.querySelector(".modalBackground");
@@ -14,8 +16,11 @@ export const confirmarResposta = (_respostaEscolhida,_correta) =>{
         if (_respostaEscolhida == _correta) {
             certaResposta.play();
             apareceModal(false);
+            return indice++;
         } else {
             voceErrou.play();
             apareceModal(false);
         }
+        
 }
+
